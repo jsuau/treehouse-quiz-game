@@ -1,7 +1,7 @@
 # treehouse-quiz-game
 Simple guessing game based on the JS treehouse course
 
-# user story:
+# user story
 create a quiz consiting of 5 questions. Once answered, evaluate how many correct answers are there and assign a rank to a player.
 
 In details, you need to:

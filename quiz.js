@@ -7,6 +7,12 @@ let correctAnswers = 0;
 
 let playerRank = '';
 
+//Target a main element and store it in a variable
+
+let message = document.querySelector('main');
+
+
+
 // Store answers in a variable
 let a1 = prompt("What do you toss to a witcher?").toUpperCase();
 let a2 = prompt("Where is Geralt from?").toUpperCase();
@@ -33,28 +39,24 @@ if (a1 == "A COIN" || a1 == "COIN") {
 
 }
 
-// Display a message and rank a player according to points scored
+// Add a condition to rank a player for their correct answers
 
 if (correctAnswers === 0) {
   playerRank = 'No crown';
-  let message = `<p>You've answered ${correctAnswers} out of 5 questions correctly. You've earned: ${playerRank}</p>`
-  document.querySelector('main').innerHTML = message
 
 } else if (correctAnswers <= 2) {
   playerRank = 'Bronze crown';
-  let message = `<p>You've answered ${correctAnswers} out of 5 questions correctly. You've earned: ${playerRank}</p>`
-  document.querySelector('main').innerHTML = message
 
 } else if (correctAnswers <= 4) {
   playerRank = 'Silver crown';
-  let message = `<p>You've answered ${correctAnswers} out of 5 questions correctly. You've earned: ${playerRank}</p>`
-  document.querySelector('main').innerHTML = message
   
 } else if (correctAnswers == 5) {
   playerRank = 'Gold crown';
-  let message = `<p>You've answered ${correctAnswers} out of 5 questions correctly. You've earned: ${playerRank}</p>`
-  document.querySelector('main').innerHTML = message
 }
+
+//Display a message and rank a player according to points scored
+
+message.innerHTML = `<p>You've answered ${correctAnswers} out of 5 questions correctly. You've earned: ${playerRank}</p>`;
 
 
 

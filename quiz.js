@@ -1,15 +1,13 @@
-/* 
-  1. Store correct answers
-   - When quiz begins, no answers are correct
-*/
+// Store correct answers. When quiz begins, no answers are correct
 
 let correctAnswers = 0;
 
     
-// 2. Store the rank of a player
+// Store the rank of a player
 
 let playerRank = '';
 
+// Store answers in a variable
 let a1 = prompt("What do you toss to a witcher?").toUpperCase();
 let a2 = prompt("Where is Geralt from?").toUpperCase();
 let a3 = prompt("What's the bard's name?").toUpperCase();
@@ -17,63 +15,46 @@ let a4 = prompt("Who's Gerlat's Child of Surprise?").toUpperCase();
 let a5 = prompt("Name Ciri's mother").toUpperCase();
 console.log(a1 + a2 + a3 + a4 + a5);
 
-/*if (a1 = "A coin") {
+// Add a condition to add up a point for each good answer
+
+if (a1 == "A COIN" || a1 == "COIN") {
   console.log(correctAnswers += 1);
-} 
+} if (a2 == "RIVIA") {
+    console.log(correctAnswers += 1);
 
+} if (a3 == "YASKIER") {
+    console.log(correctAnswers += 1);
 
-/*
-if (correctAnswers === 0) {
-  playerRank = 'No crown';
-  let message = `<p>You've answered ${correctAnswers} out of 5 questions correctly. You earned: ${playerRank}</p>`
-  document.querySelector('main').innerHTML = message
-
-}  /*else if (correctAnswers === 1) {
-  playerRank = 'Bronze crown';
-  let message = `<p>You've answered ${correctAnswers} out of 5 questions correctly. You earned: ${playerRank}</p>`
-  document.querySelector('main').innerHTML = message
+} if (a4 == "CIRI") {
+    console.log(correctAnswers += 1)
+  
+} if (a5 == "PAVETTA") {
+     console.log(correctAnswers += 1)
 
 }
 
-// 3. Select the <main> HTML element
+// Display a message and rank a player according to points scored
 
-let message = `You've answered ${correctAnswers} out of 5 questions correctly. You earned: ${playerRank}`
+if (correctAnswers === 0) {
+  playerRank = 'No crown';
+  let message = `<p>You've answered ${correctAnswers} out of 5 questions correctly. You've earned: ${playerRank}</p>`
+  document.querySelector('main').innerHTML = message
 
-document.querySelector('main').innerHTML = message
+} else if (correctAnswers <= 2) {
+  playerRank = 'Bronze crown';
+  let message = `<p>You've answered ${correctAnswers} out of 5 questions correctly. You've earned: ${playerRank}</p>`
+  document.querySelector('main').innerHTML = message
 
-
-
-/*
-  4. Ask at least 5 questions
-   - Store each answer in a variable
-   - Keep track of the number of correct answers
-*/
-/*
-q1 = "A coin" || "coin"
-q2 = "Rivia"
-q3 = "Yaskier";
-q4 = "Ciri";
-q5 = "Pavetta";
-
-
-
-
-//condition that counts correct anwers
-
-if (a1.toUpperCase() = "A coin" || (a1.toUpperCase() = "coin") {
-  correctAnswers += 1;
-} 
+} else if (correctAnswers <= 4) {
+  playerRank = 'Silver crown';
+  let message = `<p>You've answered ${correctAnswers} out of 5 questions correctly. You've earned: ${playerRank}</p>`
+  document.querySelector('main').innerHTML = message
+  
+} else if (correctAnswers == 5) {
+  playerRank = 'Gold crown';
+  let message = `<p>You've answered ${correctAnswers} out of 5 questions correctly. You've earned: ${playerRank}</p>`
+  document.querySelector('main').innerHTML = message
+}
 
 
-
-/*
-  5. Rank player based on number of correct answers
-   - 5 correct = Gold
-   - 3-4 correct = Silver
-   - 1-2 correct = Bronze
-   - 0 correct = No crown
-*/
-
-
-// 6. Output results to the <main> element
 

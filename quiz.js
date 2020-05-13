@@ -10,10 +10,19 @@ let correctAnswers = 0;
 
 let playerRank = '';
 
+let a1 = prompt("What do you toss to a witcher?").toUpperCase();
+let a2 = prompt("Where is Geralt from?").toUpperCase();
+let a3 = prompt("What's the bard's name?").toUpperCase();
+let a4 = prompt("Who's Gerlat's Child of Surprise?").toUpperCase();
+let a5 = prompt("Name Ciri's mother").toUpperCase();
+console.log(a1 + a2 + a3 + a4 + a5);
+
+/*if (a1 = "A coin") {
+  console.log(correctAnswers += 1);
+} 
 
 
-
-
+/*
 if (correctAnswers === 0) {
   playerRank = 'No crown';
   let message = `<p>You've answered ${correctAnswers} out of 5 questions correctly. You earned: ${playerRank}</p>`
@@ -44,14 +53,8 @@ q1 = "A coin" || "coin"
 q2 = "Rivia"
 q3 = "Yaskier";
 q4 = "Ciri";
-q5 = "Pavetta and Duny";
+q5 = "Pavetta";
 
-
-const a1 = prompt("What do you toss to a witcher?"); 
-const a2 = prompt("Where is Geralt from?");
-const a3 = prompt("What's the bard's name?");
-const a4 = prompt("Who's Gerlat's Child of Surprise?");
-const a5 = prompt("Name Ciri's parents");
 
 
 
@@ -60,7 +63,6 @@ const a5 = prompt("Name Ciri's parents");
 if (a1.toUpperCase() = "A coin" || (a1.toUpperCase() = "coin") {
   correctAnswers += 1;
 } 
-
 
 
 
